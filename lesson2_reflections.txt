@@ -1,0 +1,5 @@
+Q:What happens when you initialize a repository? Why do you need to do it?
+A:Initializing a repo means there's an empty audit log in the directory. Do this so you can add files to the audit log later.
+
+Q: How is the staging area different from the working directory and the repository? What value do you think it offers?
+A: You can package stuff up that goes together. 
