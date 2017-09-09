@@ -1,0 +1,21 @@
+Git will help find differences between 2 files
+Version control is awesome because you always have an old version to fall back to
+Shit happens
+Always be able to run a diff to see what changed - some things change unintentionally
+I like how it even calls out which line numbers changed, and show the exact characters that changed
+So keep lines short if at all possible
+
+Q: How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+A: I don't have to try things twice, as I can always see how I tried it before, inc comments about what did/didn't work
+
+Q:What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does?
+A: Pros for manual saves include that you think you have something worth saving, and you probably just finished some logical bit you can comment upon
+A: Cons for manual include forgetting to save
+A: Cons for autosave might include saving over an error introduced by stupid keyboard or trackpad interpretations of what you wanted
+A: Pros for autosave include power outage recovery
+
+Q: Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+A: The files can be interdependent, like the .js, .html, and .css files
+
+Q: How can you use the commands git log and git diff to view the history of files?
+A: Don't forget to scroll down to see all the lines rm'd and added
