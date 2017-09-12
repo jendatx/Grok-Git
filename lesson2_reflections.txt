@@ -6,3 +6,8 @@ A: You can package stuff up that goes together.
 
 Q: How can you use the staging area to make sure you have one commit per logical change?
 A: Keep dependent files together so they don't get out of sync.
+
+Q: What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+A: When you need to maintain a main piece of software but are also committed to developing something disruptive. A branch
+would let you do disruptive stuff without impacting customers...in case you needed to ship interim bug fixes. Then later
+you could merge the branches in a controlled fashion.
