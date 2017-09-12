@@ -19,3 +19,14 @@ A: The files can be interdependent, like the .js, .html, and .css files
 
 Q: How can you use the commands git log and git diff to view the history of files?
 A: Don't forget to scroll down to see all the lines rm'd and added
+
+Q: How can you use the commands git log and git diff to view the history of files?
+A: git log says who changed what over time, and give you the ids to go inspect and compare each commit
+git diff lets you drill in and see only (and exactly) what changed (new additions, deletions)
+using the automatic coloring helps for quick visual inspection
+
+Q:How might using version control make you more confident to make changes that could break something?
+A:I can always go back to a known stable version
+
+Q:Now that you have your workspace set up, what do you want to try using Git for?
+A:I will check in my scripts at work

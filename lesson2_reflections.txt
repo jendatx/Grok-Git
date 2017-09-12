@@ -15,3 +15,6 @@ you could merge the branches in a controlled fashion.
 Q: How do the diagrams help you visualize the branch structure?
 A: Like a family tree, the branch structure tells you where something came from,
 so you can see what it inherits from, and what all it is informed by
+
+Q: What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+A: It's like a union of two functioning branches, you get best (and worst) of both
