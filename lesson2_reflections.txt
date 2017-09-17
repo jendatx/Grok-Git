@@ -18,3 +18,8 @@ so you can see what it inherits from, and what all it is informed by
 
 Q: What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
 A: It's like a union of two functioning branches, you get best (and worst) of both
+
+Q: What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+A: It's helpful that Git can automatically merge two branches when they've not interfered with each other, just to save time.
+It makes sense that Git can't merge automatically when multiple changes have taken place in the same area of the code, you wouldn't
+want Git playing favorites or introducing logical errors by making assumptions.
