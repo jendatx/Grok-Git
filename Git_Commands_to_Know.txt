@@ -55,9 +55,13 @@ git branch -d name  |    Remove the branch with the specified name
 
 git merge master moneymaker | brings new stuff from master into moneymaker
 git merge branch1 branch2  |    Merge two branches, branch2 get merged into branch1
-**CLEARLY I NEED TO FIGURE OUT WHICH ORDER THIS HAPPENS IN**
+ reference documentation here  https://git-scm.com/docs/git-merge
+ it appears if my current branch is master and I say "get merge altBranch" it will
+ bring the altBranch code into the current master branch
 
 git remote -v | says if there's a remote repo tied to this dir
 git remote add origin https://github.com/jendatx/ud775.git | connects local dir to remote dir
 
 git push origin master | syncs my master to the repo I refer to as origin
+
+git pull origin master | syncs the master from remote repo down to my local repo
