@@ -1,0 +1,52 @@
+Git Commands to Know
+(inspired by reflections notes of Denyos on Udacity forums)
+
+Commands:
+git init | inside a directory, it starts a local repository
+git config --global color.ui auto |    get colored diff output
+
+git log  |    List the commits and show which files have changed
+enter | shows more commits in the log
+q |    exit git log!
+git log --stat  |    Show additional information about the commits
+
+git status | tells branch, what's staged, and what's untracked
+
+git diff id1 id2  |    Compare two commits, with id1 the "base"
+git diff --staged | compares stage to most recent commit
+
+git checkout  |    Shows a previous version of the file.
+git checkout master | see what's at the tip of the master branch
+
+git add <filename1> | puts 1st file in staging area, as prep to commit
+git add <filename2> | puts 2nd file on staging area, to commit with filename1
+
+git rm --cached <filename> | removes it from staging area
+
+git commit | creates trackable commit with whatever versions of files were staged
+  above opens your default text editor, which u must save and close to complete
+git commit -m "<commit message>" | to commit with tiny message
+
+[notes on commit message standards:
+  1st line = type:subject, where type comes from:
+    feat = feature
+    fix = bugfix
+    docs = delta in the docs
+    style = formatting changes only
+    refactor = production code change but no intended function change
+    test = no intended production change, just delta in test(s)
+    chore = maintenance tasks
+  Note that subject is in command tense: Remove blue (not removing/removed)
+
+git reset --hard | *ANNIHILATES* working directory version and staging area
+
+git clone  |    Create a local copy/clone from an accessible repository
+
+git branch moneymaker | create a branch called moneymaker
+
+git merge master moneymaker | brings new stuff from master into moneymaker
+
+git remote -v | says if there's a remote repo tied to this dir
+git remote add origin https://github.com/jendatx/ud775.git | connects local dir to remote dir
+
+git push origin master | syncs my master to the repo I refer to as origin
