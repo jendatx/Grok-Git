@@ -9,14 +9,22 @@ git log  |    List the commits and show which files have changed
 enter | shows more commits in the log
 q |    exit git log!
 git log --stat  |    Show additional information about the commits
+git log --graph --oneline <branch1> <branch2>  |    Show a visual representation
+  of the commit history within different branches
 
 git status | tells branch, what's staged, and what's untracked
 
 git diff id1 id2  |    Compare two commits, with id1 the "base"
 git diff --staged | compares stage to most recent commit
 
+git show commitId  |    Show the changes made in this commit compared to
+  the previous version. This is working even after merging.
+
 git checkout  |    Shows a previous version of the file.
 git checkout master | see what's at the tip of the master branch
+git checkout -b new_branch_name  |    Creates a new branch and do a checkout on
+  this branch in one call instead of git branch new_branch_name and
+  git checkout new_branch_name
 
 git add <filename1> | puts 1st file in staging area, as prep to commit
 git add <filename2> | puts 2nd file on staging area, to commit with filename1
@@ -43,8 +51,11 @@ git reset --hard | *ANNIHILATES* working directory version and staging area
 git clone  |    Create a local copy/clone from an accessible repository
 
 git branch moneymaker | create a branch called moneymaker
+git branch -d name  |    Remove the branch with the specified name
 
 git merge master moneymaker | brings new stuff from master into moneymaker
+git merge branch1 branch2  |    Merge two branches, branch2 get merged into branch1
+**CLEARLY I NEED TO FIGURE OUT WHICH ORDER THIS HAPPENS IN**
 
 git remote -v | says if there's a remote repo tied to this dir
 git remote add origin https://github.com/jendatx/ud775.git | connects local dir to remote dir
