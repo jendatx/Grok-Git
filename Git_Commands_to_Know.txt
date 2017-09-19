@@ -65,3 +65,6 @@ git remote add origin https://github.com/jendatx/ud775.git | connects local dir 
 git push origin master | syncs my master to the repo I refer to as origin
 
 git pull origin master | syncs the master from remote repo down to my local repo
+
+[after you fork a repository on GitHub, you can clone to local machine]
+git clone https://github.com/jendatx/recipes.git

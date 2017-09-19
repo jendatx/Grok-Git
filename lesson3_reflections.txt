@@ -1,2 +1,14 @@
 Q: When would you want to use a remote repository rather than keeping all your work local?
 A: When you plan to work on it from multiple computers (like home AND work). And especially when you plan to collaborate with other people on it.
+
+Q: Describe the differences between forks, clones, and branches. When would you use one instead of another?
+A: Branching is making a temporary variation of a specific commit, often with
+  the intent of merging back into the master at some point. All that branching
+  can be on your own machine. Cloning is making a full copy of the repository,
+  like if you wanted to create a new separate project to live on in parallel
+  with the original project, but without intending to ever merge the two (like
+  now you have a classical project and beside it you begin a jazz project).
+  Forking is like cloning another's repository - still attributing creation to
+  the originator - and now you can go to town and make it your own, both online
+  where you can collaborate with others, and by cloning it to your local machine
+  so you can have at it, create good stuff, then publish to the team project.
