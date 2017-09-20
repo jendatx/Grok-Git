@@ -76,3 +76,4 @@ Note the workflow when making changes in a separate branch with a wider team:
     * merge the local master into your branch
     * push your branch to the remote,
     * finally merge your branch into master via pull request
+#BestPractices: when contributing to a public repository, it’s standard practice to make the changes in a non-master branch within the fork. This way, you can easily keep your master branch up-to-date with master of the original repository, and merge changes from master into your branch when you are ready.
