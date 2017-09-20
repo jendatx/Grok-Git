@@ -68,3 +68,11 @@ git pull origin master | syncs the master from remote repo down to my local repo
 
 [after you fork a repository on GitHub, you can clone to local machine]
 git clone https://github.com/jendatx/recipes.git
+
+Note the workflow when making changes in a separate branch with a wider team:
+  - You need to stay up-to-date with changes others are making in master
+  - Rather than simply pulling and pushing your own code, you must:
+    * pull others' changes into your local master branch, 
+    * merge the local master into your branch
+    * push your branch to the remote,
+    * finally merge your branch into master via pull request
