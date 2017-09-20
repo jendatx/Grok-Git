@@ -12,3 +12,11 @@ A: Branching is making a temporary variation of a specific commit, often with
   the originator - and now you can go to town and make it your own, both online
   where you can collaborate with others, and by cloning it to your local machine
   so you can have at it, create good stuff, then publish to the team project.
+
+Q: When would you want to make changes in a separate branch rather than directly in master? What benefits does each approach have?
+A: I would almost always put my changes in a branch because you never know when you'll be interrupted and 
+  then suddenly you're behind and have to manage that aspect of handling things changing out from under you.
+  The larger the team with which you collaborate, the more likely there are to be significant changes to master
+  while you're working. For a tiny change like a typo fix, where you have someone lined up to review your 
+  pull request immediately, maybe I wouldnt bother with a branch, but only if it's something where I'll be "hot
+  editing" for just a few minutes.
