@@ -44,7 +44,7 @@ git commit -m "<commit message>" | to commit with tiny message
     refactor = production code change but no intended function change
     test = no intended production change, just delta in test(s)
     chore = maintenance tasks
-  Note that subject is in command tense: Remove blue (not removing/removed)
+  Note that subject is in command tense: Remove blue (not removing/removed)]
 
 git reset --hard | *ANNIHILATES* working directory version and staging area
 
@@ -76,4 +76,10 @@ Note the workflow when making changes in a separate branch with a wider team:
     * merge the local master into your branch
     * push your branch to the remote,
     * finally merge your branch into master via pull request
-#BestPractices: when contributing to a public repository, it’s standard practice to make the changes in a non-master branch within the fork. This way, you can easily keep your master branch up-to-date with master of the original repository, and merge changes from master into your branch when you are ready.
+#BestPractices: when contributing to a public repository, it’s standard practice to make the changes
+in a non-master branch within the fork. This way, you can easily keep your master branch up-to-date
+with master of the original repository, and merge changes from master into your branch when you are ready.
+
+Keep your fork up to date by adding another remote to your clone, typically called upstream
+git remote add upstream [URL of the upstream project you forked from]
+git pull upstream master
