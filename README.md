@@ -19,22 +19,31 @@ git log
 * list the commits and show which files have changed
 * hit <enter> to page through  more commits in a long log
 * q exits git log
+
 git log -5 -oneline
 * see the one-liner representation of the most recent 5 commits
+
 git log --stat
 * further details on commits
+
 git log --graph --oneline <branch1> <branch2>  
 * see a visual representation of commit history within specified branches
+
 git --no-pager log --oneline 
 * lets you search all commit messages without all that paging, see below
+
 git --no-pager log --oneline | grep "oops"
 * helps you find that commit where your comment included "oops"
+
 git log HEAD~1..HEAD 
 * shows what's happened between head and the previous commit
+
 git log HEAD~2..HEAD 
 * as above, but further backward in commit history, etc.
+
 git cat-file -p <7-char-SHA-commit-id> 
 * cats the particular commit (it's a file, afterall)
+
 git ls-tree <7-char-SHA-commit-id> 
 * see what was in the repository at the time of that commit
 * above shows SHAs for you can then cat-file to review snapshot without needing to check out that commit
@@ -47,27 +56,36 @@ git status
 ## Examine Differences between Commits
 git show commitId 
 * Show the changes made in this commit compared to the previous version
+
 git diff id1 id2  
 * compare two commits, with id1 the "base"
+
 git diff --staged
 * compares stage to most recent commit
+
 git difftool
 * if you're using a 3rd-party tool like tht graphs stuff for you
+
 git diff id1 <filename>
 * compares file as in your current working directory vs what was like in commit id1
 
 ## Branch Management
 git checkout master 
 * get what's at the tip of the master branch
+
 git branch moneymaker
 * create a branch called moneymaker
+
 git checkout -b new_branch_name  
 * creates a new branch and does a checkout on this new branch in one call
 * use in place of 'git branch new_branch_name' and then 'git checkout new_branch_name'
+
 git branch -d loser-mcbadbranch
 * Remove the branch with the specified name
+
 git merge master moneymaker
 * bring new stuff from master into moneymaker
+
 git merge branch1 branch2
 * merge two branches, branch2 get merged into branch1
 * reference documentation here  https://git-scm.com/docs/git-merge
@@ -78,10 +96,13 @@ git merge branch1 branch2
 Staging files puts an entry in the repo index for them; making index look more like your working directory
 git add <filename1>
 * puts file1 in staging area, as prep to commit
+
 git add <filename2> 
 * ditto file2
+
 git rm --cached <filename1> 
 * removes file1 from staging area (from repo index)
+
 git reset HEAD <filename>| without flags & given filename, makes index look like index was at time of last commit 
   (essentially undoes staging of that file and makes index look like it was when HEAD commit was made)
 
@@ -90,8 +111,10 @@ git commit
 * creates trackable commit with whatever versions of files were staged
 * above opens your default text editor to gather commit message
 * you MUST save and close that message file to complete the commit (fails otherwise, as required)
+
 git commit -m "<commit message>" 
 * to commit with tiny message (suitable for use by yourself, likely not enough detail for others)
+
 git commit --amend 
 * for when you prematurely committed something just now and need to tweak it
 * the above slightly alters history of the repository
@@ -107,16 +130,20 @@ git clone <something somewhere>
 ## Set up Remote (typically for collaborating)
 git remote -v
 * says if there's a remote repo already tied to this dir
+
 git remote add origin <URL> 
 * connects local dir to remote dir
 * 'origin' is convention, different usage from 'upstream' - see below
+
 git fetch origin master
 * tells you what's available to pull without actually pulling
 * keeps you from being blind-sided
+
 git pull origin master
 * syncs the master from remote origin repo down to my local repo
 * generally speaking, always PULL immediately before intending to PUSH
 * as nobody likes merge-hell
+
 git push origin master
 * syncs my local master branch to the repo I refer to as origin
 
@@ -137,6 +164,7 @@ touch .gitignore
 * (optional) you can also create a .gitignore_global file in your home directory on the machine
 * (optional) that exludes files in all repos
 * (optional) to ensure that git is configured to use this new .gitignore_global file in your home directory:
+
 git config --global core.excludesfile /Users/<user>/.gitignore_global
 
 # Level-up Team GitHub Usage
@@ -146,7 +174,9 @@ Keep your fork up to date by adding another remote to your clone, typically call
 git remote add upstream <URL of the upstream project you forked from>
 git remote -v
 * verify you've got the remote right
+
 git pull upstream master
+* get the latest/greatest from upstream repo
 
 ## Industry Commit Message Conventions
 1st line = type:subject
