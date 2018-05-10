@@ -76,6 +76,9 @@ git diff id1 <filename>
 * compares file as in your current working directory vs what was like in commit id1
 
 ## Branch Management
+git branch
+* lists out the existing branches in this repo (usually the active branch is somehow highlighted)
+
 git checkout master 
 * get what's at the tip of the master branch
 
@@ -195,6 +198,9 @@ touch .gitignore
 * (optional) to ensure that git is configured to use this new .gitignore_global file in your home directory:
 
 git config --global core.excludesfile /Users/<user>/.gitignore_global
+  
+## Be the Boss of Branches
+There's a great way to set your prompt to always include repo status (as in "what branch am I in?"), using a nice git-prompt.sh shell script by Shawn O. Pearce. I've got it in my user directory & love it. It's distributed under the GNU General Public License. 
 
 # Level-up Team GitHub Usage
 
