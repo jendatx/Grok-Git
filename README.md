@@ -7,9 +7,14 @@ git help <command>
 * e.g. git help commit, or git help add
 * above opens man page, or you can do man git-add
 
+Also see excellent references - like online help - in the References section at bottom
+
 ## Config
 git config --global color.ui auto 
 * get auto-colored diff output (easier when comparing stuff
+
+git config --global credential.helper osxkeychain
+* so (Mac users) won't have to enter creds with every clone/push/pull
 
 ## Start a Repo
 git init 
@@ -179,7 +184,8 @@ git reset --hard | *ANNIHILATES* machine's working directory file versions AND s
 ## Be the Boss of Directory Status
 In your local machine's working directory you might keep files you won't be putting in git.
 (Like credentials or a local db or scratch files.)
-To stop git from bugging you about files it won't be getting ("Untracked! Untracked!"):
+Here's how to stop git from bugging you about files it won't be getting ("Untracked! Untracked!")
+
 touch .gitignore 
 * creates .gitignore in the working directory
 * use fave text editor to add filenames git should ignore, one per line
@@ -219,6 +225,7 @@ types include
   
 ## Workflow to Review before Introducing Team to your Branch-of-New-Goodies
 You need to stay up-to-date with changes others are making in master
+
 Rather than simply pulling and pushing your own code, you must:
 * pull others' changes into your local master branch, 
 * merge the local master into your branch
