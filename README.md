@@ -1,14 +1,15 @@
 # Grok-Git
 Stash of notes regarding using git/GitHub
+(See references at bottom of README for more)
 
 ## Help
 git help <command> 
 * e.g. git help commit, or git help add
-* above opens man page, or you can do man git-add)
+* above opens man page, or you can do man git-add
 
 ## Config
 git config --global color.ui auto 
-* get auto-colored diff output (easier when comparing stuff)
+* get auto-colored diff output (easier when comparing stuff
 
 ## Start a Repo
 git init 
@@ -100,11 +101,17 @@ git add <filename1>
 git add <filename2> 
 * ditto file2
 
+git add .
+* this adds all the stuff in your working directory to staging
+* I've seen peers accidentally stage/commit stuff they had to then clean up...
+* not recommended unless you learn how to use .gitignore (see below)
+
 git rm --cached <filename1> 
 * removes file1 from staging area (from repo index)
 
-git reset HEAD <filename>| without flags & given filename, makes index look like index was at time of last commit 
-  (essentially undoes staging of that file and makes index look like it was when HEAD commit was made)
+git reset HEAD <filename>
+* without flags & given filename, makes index look like index was at time of last commit 
+* (essentially undoes staging of that file and makes index look like it was when HEAD commit was made)
 
 ## Commit Basics
 git commit 
@@ -112,7 +119,7 @@ git commit
 * above opens your default text editor to gather commit message
 * you MUST save and close that message file to complete the commit (fails otherwise, as required)
 
-git commit -m "<commit message>" 
+git commit -m "here is what i did to these files" 
 * to commit with tiny message (suitable for use by yourself, likely not enough detail for others)
 
 git commit --amend 
@@ -122,17 +129,20 @@ git commit --amend
 * purists may scream, so best not used in collaboration with others
 * just on solo projects or branches before exposing them to wider world)
 
-## Clone a Repo
+## Clone a Remote Repo
 git clone <something somewhere>
 * create a local copy/clone from an accessible repository
 * typically you copy URL from GitHub
+* makes a directory on your machine
+* that directory doesn't need git init command, as already has .git subdirectory
 
-## Set up Remote (typically for collaborating)
 git remote -v
-* says if there's a remote repo already tied to this dir
+* says if there's a remote repo already tied to this dir 
+* (there should be, since you cloned)
 
 git remote add origin <URL> 
-* connects local dir to remote dir
+* connects local dir to remote dir if you didn't clone as above
+* (above cloning process should have automatically set up the origin for you)
 * 'origin' is convention, different usage from 'upstream' - see below
 
 git fetch origin master
@@ -149,7 +159,17 @@ git push origin master
 
 # Level-Up Individual Git Usage
 
-## Do Over
+## Remove/Revert Files
+git rm filename
+* deletes file and tells git to stage its deletion
+
+git mv oldname newname
+* renames file locally & stages deletion of old file & stages file with new name
+
+git checkout --myname
+* throw away recent changes to myname file and revert to last committed version in repo
+
+## Full Do Over
 git reset --hard | *ANNIHILATES* machine's working directory file versions AND staging area
 * haven't done this personally, but could be helpful if got in a bad situation
 
@@ -204,4 +224,11 @@ Rather than simply pulling and pushing your own code, you must:
 * and merge changes from master into your branch, helping all involved avoid merge-hell
 
 
+# References
+* Free class: Udacity 775 is a great free online class I took
+* Free via library: book "Network Programmability and Automation" by Jason Edelman, Matt Oswalt, Scott S. Lowe, chapter 8
+* Free YouTube playlist: https://www.youtube.com/playlist?list=PL5-da3qGB5IBLMp7LtN8Nc3Efd4hJq0kD
+* Free quick guide http://www.dataschool.io/git-quick-reference-for-beginners/
 
+# To Do
+* Review free online book at https://git-scm.com/book/en/v2
