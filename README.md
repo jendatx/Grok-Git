@@ -84,6 +84,9 @@ git checkout -b new_branch_name
 git branch -d loser-mcbadbranch
 * Remove the branch with the specified name
 
+git branch -va
+* inspect last commit for all branches, both local and remote
+
 git merge master moneymaker
 * bring new stuff from master into moneymaker
 
