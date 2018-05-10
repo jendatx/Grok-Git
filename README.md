@@ -194,12 +194,16 @@ git config --global core.excludesfile /Users/<user>/.gitignore_global
 
 ## Manage Upstream
 Keep your fork up to date by adding another remote to your clone, typically called upstream
-git remote add upstream <URL of the upstream project you forked from>
+
+git remote add upstream URL-of-remote-repo
+* specify the repo you're intending to fetch from
+
 git remote -v
-* verify you've got the remote right
+* verify you've got the remote right (likely 4 lines: push and pull for each of origin and upstream)
 
 git pull upstream master
 * get the latest/greatest from upstream repo
+* you can also git fetch first, then merge; the git pull does both
 
 ## Industry Commit Message Conventions
 1st line = type:subject
@@ -232,6 +236,8 @@ Rather than simply pulling and pushing your own code, you must:
 * Free via library: book "Network Programmability and Automation" by Jason Edelman, Matt Oswalt, Scott S. Lowe, chapter 8
 * Free YouTube playlist: https://www.youtube.com/playlist?list=PL5-da3qGB5IBLMp7LtN8Nc3Efd4hJq0kD
 * Free quick guide http://www.dataschool.io/git-quick-reference-for-beginners/
+* Free online help at https://help.github.com/
 
 # To Do
-* Review free online book at https://git-scm.com/book/en/v2
+* Review free Git Pro online book at https://git-scm.com/book/en/v2
+* Go see GitHub videos at https://guides.github.com/
