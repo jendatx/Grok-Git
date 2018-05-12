@@ -182,7 +182,8 @@ git checkout --myname
 
 ## Full Do Over
 git reset --hard | *ANNIHILATES* machine's working directory file versions AND staging area
-* haven't done this personally, but could be helpful if got in a bad situation
+* ~haven't done this personally, but could be helpful if got in a bad situation~
+* worked like a charm
 
 ## Be the Boss of Directory Status
 In your local machine's working directory you might keep files you won't be putting in git.
