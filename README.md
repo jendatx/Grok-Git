@@ -104,6 +104,7 @@ Also see excellent references - like online help - in the References section at 
 
 ## Staging Files
 Staging files puts an entry in the repo index for them; making index look more like your working directory
+
 `git add filename1`
 * puts file1 in staging area, as prep to commit
 
