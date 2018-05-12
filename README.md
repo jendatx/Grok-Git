@@ -3,21 +3,21 @@ Stash of notes regarding using git/GitHub
 (See references at bottom of README for more)
 
 ## Help
-git help <command> 
-* e.g. git help commit, or git help add
-* above opens man page, or you can do man git-add
+'git help some-command-of-interest' 
+* e.g. 'git help commit', or 'git help add'
+* above opens man page, or you can do 'man git-add'
 
 Also see excellent references - like online help - in the References section at bottom
 
 ## Config
-git config --global color.ui auto 
-* get auto-colored diff output (easier when comparing stuff
+`git config --global color.ui auto`
+* get auto-colored diff output for easier comparison of text
 
-git config --global credential.helper osxkeychain
-* so (Mac users) won't have to enter creds with every clone/push/pull
+`git config --global credential.helper osxkeychain`
+* so (Mac users) won't have to enter creds with every GitHub interaction
 
 ## Start a Repo
-git init 
+`git init`
 * inside a machine's directory, it starts a local repository
 
 ## Examine a Repo's Commit Log
@@ -246,7 +246,7 @@ Rather than simply pulling and pushing your own code, you must:
 
 
 # References
-* Free class: Udacity 775 is a great free online class I took
+* Free class: [Udacity 775](https://www.udacity.com/course/how-to-use-git-and-github--ud775) is a thorough free online class that took a few hours to do in spare time but really upped my comfort level
 * Free via library: book "Network Programmability and Automation" by Jason Edelman, Matt Oswalt, Scott S. Lowe, chapter 8
 * Free YouTube playlist: https://www.youtube.com/playlist?list=PL5-da3qGB5IBLMp7LtN8Nc3Efd4hJq0kD
 * Free quick guide http://www.dataschool.io/git-quick-reference-for-beginners/
