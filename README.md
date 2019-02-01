@@ -3,7 +3,7 @@ Stash of notes regarding using git/GitHub
 (See references at bottom of README for more)
 
 ## Help
-`git help some-command-of-interest` 
+`git help some-command-of-interest`
 * e.g. 'git help commit', or 'git help add'
 * above opens man page, or you can do 'man git-add'
 
@@ -47,7 +47,7 @@ Also see excellent references - like online help - in the References section at 
 `git log HEAD~2..HEAD`
 * as above, but further backward in commit history, etc.
 
-`git cat-file -p 7-character-SHA-commit-id` 
+`git cat-file -p 7-character-SHA-commit-id`
 * shows contents of the particular commit (it's a file, afterall)
 
 `git ls-tree 7-character-SHA-commit-id`
@@ -67,7 +67,7 @@ Also see excellent references - like online help - in the References section at 
 * compare two commits, with id1 the "base"
 
 `git diff --staged`
-* compares stage to most recent commit
+* displays comparison of staged files to their versions in most recent commit
 
 `git difftool`
 * if you're using a 3rd-party tool like tht graphs stuff for you
@@ -117,17 +117,23 @@ Staging files puts an entry in the repo index for them; making index look more l
 * removes file1 from staging area (from repo index)
 
 `git reset HEAD filename`
-* without flags & given filename, makes index info on that filename look like index was at time of last commit 
+* without flags & given filename, makes index info on that filename look like index was at time of last commit
 * (essentially undoes staging of that file and makes index look like it was when HEAD commit was made)
 
 ## Commit Basics
-`git commit` 
+`git commit`
 * creates trackable commit with whatever versions of files were staged
 * above opens your default text editor to gather commit message
 * you MUST save and close that message file to complete the commit (fails otherwise, as message is required)
 
 `git commit -m "here is what i did to these files"`
 * to commit with tiny message (suitable for use by yourself, likely not enough detail for others)
+
+`git commit -a`
+* automatically commit any files that had been previously committed and are hence being tracked (careful as this does not add any new files you've created without adding them to your repo)
+
+`git commit -am "modifications to 3 files that work in cahoots"`
+* As above but with commit message built in
 
 `git commit --amend`
 * for when you prematurely committed something just now and need to tweak it
@@ -137,17 +143,17 @@ Staging files puts an entry in the repo index for them; making index look more l
 * just on solo projects or branches before exposing them to wider world)
 
 ## Clone a Remote Repo
-`git clone URL-copied-to-your-clipboard-from-GitHub` 
+`git clone URL-copied-to-your-clipboard-from-GitHub`
 * create a local copy/clone from an accessible repository
 * typically you copy URL from GitHub
 * makes a directory on your machine
 * that directory doesn't need `git init` command, as already has .git subdirectory
 
 `git remote -v`
-* says if there's a remote repo already tied to this dir 
+* says if there's a remote repo already tied to this dir
 * (there should be, if you cloned)
 
-`git remote add origin URL-copied-to-your-clipboard-from-GitHub` 
+`git remote add origin URL-copied-to-your-clipboard-from-GitHub`
 * connects local dir to remote dir if you didn't clone as above
 * (above cloning process should have automatically set up the origin for you)
 * 'origin' is convention, different usage from 'upstream' - see below
@@ -172,6 +178,9 @@ Staging files puts an entry in the repo index for them; making index look more l
 `git rm filename`
 * deletes file and tells git to stage its deletion
 
+`git rm -r --cached upperdir/dir2forget`
+* when you staged a folder by accident
+
 `git mv oldname newname`
 * renames file locally & stages deletion of oldname file & stages newname file
 
@@ -187,7 +196,7 @@ Staging files puts an entry in the repo index for them; making index look more l
 ## Be the Boss of Directory Status
 * In your local machine's working directory you might keep files you won't be putting in git.
 * (Like credentials or a local db or scratch files.)
-* Here's how to stop git from bugging you about files it won't be getting 
+* Here's how to stop git from bugging you about files it won't be getting
 * (otherwise it will show you a growing list of untracked files all. the. time.)
 
 `touch .gitignore`
@@ -195,13 +204,22 @@ Staging files puts an entry in the repo index for them; making index look more l
 * use fave text editor to add filenames git should ignore, one per line
 * stage & commit this file as usual to the repo with a message like "Created .gitignore"
 * (optional) you can also create a .gitignore_global file in your home directory on the machine
-* (optional) that exludes files in all repos
+* (optional) that excludes files in all repos
 * (optional) to ensure that git is configured to use this new .gitignore_global file in your home directory:
 
 `git config --global core.excludesfile /Users/username/.gitignore_global`
-  
+
+`echo "__pycache__" >> .gitignore`
+* append a folder of artifacts into .gitignore, so they get ignored
+
+`echo "*.pyc" >> .gitignore`
+* append any file with the .pyc extension into the .gitignore file
+
+`git add .gitignore`
+* don't forget to add and commit .gitignore to make it go into effect
+
 ## Be the Boss of Branches
-There's a great way to set your prompt to always include repo status (as in "what branch am I in?"), using a nice git-prompt.sh shell script by Shawn O. Pearce. I've got it in my user directory & love it. It's distributed under the GNU General Public License. 
+There's a great way to set your prompt to always include repo status (as in "what branch am I in?"), using a nice git-prompt.sh shell script by Shawn O. Pearce. I've got it in my user directory & love it. It's distributed under the GNU General Public License.
 
 # Level-up Team GitHub Usage
 
@@ -212,7 +230,7 @@ There's a great way to set your prompt to always include repo status (as in "wha
 * specify the repo you're intending to fetch from
 
 `git remote -v`
-* verify you've got the remote(s) right 
+* verify you've got the remote(s) right
 * if using only an origin repo, likely 2 lines here: 1 for fetch/pull and another for push
 * if using an origin AND an upstream, likely 4 lines: push and pull for each of origin and upstream
 
@@ -232,12 +250,12 @@ types include
 * refactor = production code change but no intended function change
 * test = no intended production change, just delta in test(s)
 * chore = maintenance tasks
-  
+
 ## Workflow to Review before Introducing Team to your Branch-of-New-Goodies
 You need to stay up-to-date with changes others are making in master
 
 Rather than simply pulling and pushing your own code, you must:
-* pull others' changes into your local master branch, 
+* pull others' changes into your local master branch,
 * merge the local master into your branch
 * push your branch to the remote,
 * finally make a pull request up on GitHub (requesting authorized individual pull your branch changes into master)
