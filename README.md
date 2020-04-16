@@ -260,6 +260,39 @@ Rather than simply pulling and pushing your own code, you must:
 * push your branch to the remote,
 * finally make a pull request up on GitHub (requesting authorized individual pull your branch changes into master)
 
+## Cleanup after my Pull Request was Merged to Master
+Hooray, my changes were accepted. Now it's time to clean up my old branch.
+
+`git pull origin master`
+* to be sure I have the latest
+
+`git branch -v`
+* likely see my old branch on my machine
+
+`git branch -a`
+* likely see my old branch on my machine AND my old branch up on the origin
+
+`git remote prune origin --dry-run`
+* safe way to see if my old branch on the origin can be pruned
+* if my old branch isn't listed when this command runs, I likely need to go delete it on GitHub (after verifying it WAS merged)
+* clicking the trash icon from the "/branches" view of the repo should work if it had been properly merged
+
+`git remote prune origin --dry-run`
+* should now list output like `Pruning origin URL: https://github.com/org/repo.git [would prune] origin/jend_sprint1`
+* this means it CAN be pruned, not that it has been pruned (because of --dry-run option)
+
+`git remote prune origin`
+* without the dry-run option, does the pruning
+
+`git branch -a`
+* should show my old branch ONLY on my local machine (not up on origin anymore)
+
+`git branch -d jend_sprint1`
+* cleans up my machine of old branch
+
+`git branch -a`
+* should now only show active branches
+
 ## Contributing to a Public Repo
 * it’s standard practice to make your suggested changes in a non-master branch within your fork
 * this way, you can easily keep your master branch up-to-date with master of the original repository
