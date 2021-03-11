@@ -187,6 +187,15 @@ Staging files puts an entry in the repo index for them; making index look more l
 `git checkout --myname`
 * throw away recent changes to myname file and revert to last committed version in repo
 
+`git clean -n -d`
+* when you forgot you checked out master and did branch work, accidentally saving work to local master
+* this will tell you which files could be cleaned out of master but is a DRY RUN (doesn't do anything but list your mistaken files)
+* you must stash your changes elsewhere (like TextEdit), and then reapply them after checking out your branch later
+
+`git clean -f`
+* This is how you force clean up when the dry run above showed what you expected
+* Now grab your stashed work and checkout your branch and reapply the stashed work and save it in the correct branch, you problem solver!
+
 ## Full Do Over
 `git reset --hard`
 * **ANNIHILATES** machine's working directory file versions AND staging area
