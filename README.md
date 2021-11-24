@@ -231,6 +231,12 @@ Staging files puts an entry in the repo index for them; making index look more l
 There's a great way to set your prompt to always include repo status (as in "what branch am I in?"), using a nice git-prompt.sh shell script by Shawn O. Pearce. I've got it in my user directory & love it. It's distributed under the GNU General Public License.
 
 # Level-up Team GitHub Usage
+  
+## Collaboration
+* Etiquette I've learned
+  
+`git fetch`
+* gets the team goodies from the remote, so you can checkout the code in the branches they've committed
 
 ## Manage Upstream
 * Keep your fork up to date by adding another remote to your clone, typically called upstream
@@ -269,6 +275,10 @@ Rather than simply pulling and pushing your own code, you must:
 * push your branch to the remote,
 * finally make a pull request up on GitHub (requesting authorized individual pull your branch changes into master)
 
+## Pull Request Etiquette
+If your team is using GitHub repo Issues to track to-do items, then commits and pull requests can automatically close issues...if you use the right syntax
+* See https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword
+  
 ## Cleanup after my Pull Request was Merged to Master
 Hooray, my changes were accepted. Now it's time to clean up my old branch.
 
@@ -308,6 +318,7 @@ Hooray, my changes were accepted. Now it's time to clean up my old branch.
 * and merge changes from master into your branch, helping all involved avoid merge-hell
 
 # References
+* Free GitHub documentation: https://docs.github.com/en
 * Free class: [Udacity 775](https://www.udacity.com/course/how-to-use-git-and-github--ud775) is a thorough free online class that took a few hours to do in spare time but really upped my comfort level
 * Free via library: book "Network Programmability and Automation" by Jason Edelman, Matt Oswalt, Scott S. Lowe, chapter 8
 * Free YouTube playlist: https://www.youtube.com/playlist?list=PL5-da3qGB5IBLMp7LtN8Nc3Efd4hJq0kD
