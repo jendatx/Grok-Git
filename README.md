@@ -333,6 +333,7 @@ Hooray, my changes were accepted. Now it's time to clean up my old branch.
 
 # References
 * Free GitHub documentation: https://docs.github.com/en
+* Free sample repo setup: https://github.com/navdeep-G/samplemod
 * Free class: [Udacity 775](https://www.udacity.com/course/how-to-use-git-and-github--ud775) is a thorough free online class that took a few hours to do in spare time but really upped my comfort level
 * Free via library: book "Network Programmability and Automation" by Jason Edelman, Matt Oswalt, Scott S. Lowe, chapter 8
 * Free YouTube playlist: https://www.youtube.com/playlist?list=PL5-da3qGB5IBLMp7LtN8Nc3Efd4hJq0kD
