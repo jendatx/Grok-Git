@@ -20,6 +20,20 @@ Also see excellent references - like online help - in the References section at 
 `git init`
 * inside a machine's directory, it starts a local repository
 
+## Set up structure of a repo
+README.md
+Example_Notebook.ipynb
+.gitignore
+setup.py
+requirements.txt
+sample/__init__.py
+sample/core.py
+sample/constants.py
+sample/utilities.py
+tests/test_core.py
+tests/test_utils.py
+tests/fake_data/fake_records.csv
+
 ## Examine a Repo's Commit Log
 `git log`  
 * list the commits and show which files have changed
