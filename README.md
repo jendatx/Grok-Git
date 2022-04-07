@@ -149,12 +149,16 @@ Staging files puts an entry in the repo index for them; making index look more l
 `git commit -am "modifications to 3 files that work in cahoots"`
 * As above but with commit message built in
 
+`git -c "user.name=Your Name" -c "user.email=Your email" commit ...`
+* typically on your own machine you'll have previously run `git config --global` to set username and email
+* use the one-time commit for when you're on a shared machine
+  
 `git commit --amend`
 * for when you prematurely committed something just now and need to tweak it
 * the above slightly alters history of the repository
 * folks will see only the amended commit, not the original commit - keeping history a bit cleaner
 * purists may scream, so best not used in collaboration with others
-* just on solo projects or branches before exposing them to wider world)
+* just on solo projects or branches before exposing them to wider world
 
 ## Clone a Remote Repo
 `git clone URL-copied-to-your-clipboard-from-GitHub`
