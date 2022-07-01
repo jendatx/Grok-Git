@@ -109,6 +109,9 @@ tests/fake_data/fake_records.csv
 * and you don't intend to keep using the branch
 * mostly so you won't *accidentally* develop in this branch anymore
 
+`git fetch --all`
+* show me all the branches that exist up on origin
+
 `git branch -va`
 * inspect last commit for all branches, both local and remote
 
