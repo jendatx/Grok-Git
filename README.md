@@ -40,7 +40,7 @@ tests/fake_data/fake_records.csv
 * hit <enter> to page through  more commits in a long log
 * q exits git log
 
-`git log -5 -oneline`
+`git log -5 --oneline`
 * see the one-liner representation of the most recent 5 commits
 
 `git log --stat`
